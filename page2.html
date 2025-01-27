@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url("images/wallpaper2.jpg"); /* Set the background image */
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            background-attachment: fixed; /* Make the background image fixed */
+            }
+        .slides,
+        .flex-control-nav,
+        .flex-direction-nav {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .flexslider {
+            margin: 0;
+            padding: 0;
+        }
+
+        .flexslider .slides > li {
+            display: flex;
+        }
+
+        .flexslider .slides img {
+            width: 100%;
+            height: auto;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.css"> <!-- Flexslider stylesheet -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js" defer></script>
+    <script src="script2.js" defer> </script>
+    
+</head>
+
+
+<body>
+    <header>
+        <h1>Highlights</h1>
+        <nav>
+            <a id="left" href="adminpage.html">Admin</a> <!-- Link to admin page -->
+            <a href="homepage.html">Home</a>
+            <a href="page2.html">News</a>
+            <a href="page3.html">Weather</a>
+            <a href="contactus.html">Contact</a>
+            <a id="right" href="userlogin.html">User Login</a> <!-- Link to user login page -->
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="news-block" style="grid-column: 1; grid-row: 1;">
+            Highlighted News 1
+            <div class="flexslider">
+                <ul class="slides"> <!-- Slides should have the class 'slides' -->
+                    <li><img src="images/news1.jpg" alt="News 1"></li>
+                    <li><img src="images/news2.jpg" alt="News 2"></li>
+                    <li><img src="images/news3.jpg" alt="News 3"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="news-block" style="grid-column: 1; grid-row: 2;">
+            Highlighted News 2
+            <div class="flexslider">
+                <ul class="slides"> <!-- Slides should have the class 'slides' -->
+                    <li><img src="images/news1.jpg" alt="News 1"></li>
+                    <li><img src="images/news2.jpg" alt="News 2"></li>
+                    <li><img src="images/news3.jpg" alt="News 3"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="news-block" style="grid-column: 2; grid-row: 1;">
+            Highlighted News 3
+            <div class="flexslider">
+                <ul class="slides"> <!-- Slides should have the class 'slides' -->
+                    <li><img src="images/news1.jpg" alt="News 1"></li>
+                    <li><img src="images/news2.jpg" alt="News 2"></li>
+                    <li><img src="images/news3.jpg" alt="News 3"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="news-block" style="grid-column: 2; grid-row: 2;">
+            Highlighted News 4
+            <div class="flexslider">
+                <ul class="slides"> <!-- Slides should have the class 'slides' -->
+                    <li><img src="images/news1.jpg" alt="News 1"></li>
+                    <li><img src="images/news2.jpg" alt="News 2"></li>
+                    <li><img src="images/news3.jpg" alt="News 3"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="news-block" style="grid-column: 3; grid-row: 1;">
+            Highlighted News 5
+            <div class="flexslider">
+                <ul class="slides"> <!-- Slides should have the class 'slides' -->
+                    <li><img src="images/news1.jpg" alt="News 1"></li>
+                    <li><img src="images/news2.jpg" alt="News 2"></li>
+                    <li><img src="images/news3.jpg" alt="News 3"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="news-block" style="grid-column: 3; grid-row: 2;">
+            Highlighted News 6
+            <div class="flexslider">
+                <ul class="slides"> <!-- Slides should have the class 'slides' -->
+                    <li><img src="images/news1.jpg" alt="News 1"></li>
+                    <li><img src="images/news2.jpg" alt="News 2"></li>
+                    <li><img src="images/news3.jpg" alt="News 3"></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Follow us on:</p>
+        <a href="https://www.facebook.com">Facebook</a>
+        <a href="https://www.twitter.com">Twitter</a>
+        <a href="https://www.instagram.com">Instagram</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+
+        <form action="subscribe.html" method="post">
+            <label for="email">Subscribe to our newsletter:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+
+    </footer>
+</body>
+</html>

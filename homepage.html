@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.css"> <!-- Flexslider stylesheet -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js" defer></script>
+    <script src="script.js" defer> </script>
+    
+</head>
+
+
+<body>
+    <header id="main-header">
+        <h1>Headline Hub</h1>
+
+
+        <nav>
+            <a id="left" href="adminpage.html">Admin</a> <!-- Link to admin page -->
+            <a href="homepage.html">Home</a>
+            <a href="page2.html">News</a>
+            <a href="page3.html">Weather</a>
+            <a href="contactus.html">Contact</a>
+            <a id="right" href="userlogin.html">User Login</a> <!-- Link to user login page -->
+        </nav>
+    </header>
+
+    <div class="flexslider"> 
+        <ul class="slides"> 
+            <li><img src="images/image1.jpg" alt="News 1"></li> 
+            <li><img src="images/image2.jpg" alt="News 2"></li> 
+            <li><img src="images/image3.jpg" alt="News 3"></li> 
+            <li><img src="images/image4.jpg" alt="News 4"></li> 
+        </ul> 
+     </div> 
+
+    <div class="container">
+        <div class="news-block" style="grid-column: 1; grid-row: 1;">Highlighted News 1</div>
+        <div class="news-block" style="grid-column: 1; grid-row: 2;">Highlighted News 2</div>
+        <div class="news-block" style="grid-column: 2; grid-row: 1;">Highlighted News 3</div>
+        <div class="news-block" style="grid-column: 2; grid-row: 2;">Highlighted News 4</div>
+
+        
+        <div class="weather-block" id="weather-forecast">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <div class="weather-widget" id="weather-london">
+                            <h2>London, UK</h2>
+                            <div class="weather-info">
+                                <p id="weather-description-london"></p>
+                                <p id="temperature-london"></p>
+                                <p id="humidity-london"></p>
+                                <p id="wind-speed-london"></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="weather-widget" id="weather-berlin">
+                            <h2>Berlin, Germany</h2>
+                            <div class="weather-info-berlin">
+                                <p id="weather-description-berlin"></p>
+                                <p id="temperature-berlin"></p>
+                                <p id="humidity-berlin"></p>
+                                <p id="wind-speed-berlin"></p>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="weather-widget" id="weather-paris">
+                            <h2>Paris, France</h2>
+                            <div class="weather-info-paris">
+                                <p id="weather-description-paris"></p>
+                                <p id="temperature-paris"></p>
+                                <p id="humidity-paris"></p>
+                                <p id="wind-speed-paris"></p>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="weather-widget" id="weather-canberra">
+                            <h2>Canberra, Australia</h2>
+                            <div class="weather-info-canberra">
+                                <p id="weather-description-canberra"></p>
+                                <p id="temperature-canberra"></p>
+                                <p id="humidity-canberra"></p>
+                                <p id="wind-speed-canberra"></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+            
+        </div>
+
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Follow us on:</p>
+        <a href="https://www.facebook.com">Facebook</a>
+        <a href="https://www.twitter.com">Twitter</a>
+        <a href="https://www.instagram.com">Instagram</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+
+        <form action="subscribe.html" method="post">
+            <label for="email">Subscribe to our newsletter:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+
+    </footer>
+</body>
+</html>
