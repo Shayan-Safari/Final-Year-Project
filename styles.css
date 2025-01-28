@@ -202,6 +202,10 @@ flex-direction: column;
 align-items: center;
 }
 
+.weather-block .slides {
+height: 750px;
+}
+
 .weather-widget h2 {
 margin-bottom: 10px;
 font-size: 24px;
@@ -212,6 +216,56 @@ color: #333;
 display: flex;
 flex-direction: column;
 align-items: center;
+height: 650px;
+background-image: url("images/weather-widget-1.png");
+background-size: cover;
+background-position: center;
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+animation: fadeIn 1s ease-in-out;
+margin-bottom: 20px;
+}
+
+.weather-info-berlin {
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 650px;
+background-image: url("images/weather-widget-3.png");
+background-size: cover;
+background-position: center;
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+animation: fadeIn 1s ease-in-out;
+margin-bottom: 20px;
+}
+
+.weather-info-paris {
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 650px;
+background-image: url("images/weather-widget-2.png");
+background-size: cover;
+background-position: center;
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+animation: fadeIn 1s ease-in-out;
+margin-bottom: 20px;
+}
+
+.weather-info-canberra {
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 650px;
+background-image: url("images/weather-widget-2.png");
+background-size: cover;
+background-position: center;
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+animation: fadeIn 1s ease-in-out;
+margin-bottom: 20px;
 }
 
 .weather-info p {
@@ -219,6 +273,7 @@ margin: 5px 0;
 font-size: 18px;
 color: #555;
 }
+
 
 @keyframes fadeIn {
     from {
