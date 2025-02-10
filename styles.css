@@ -212,12 +212,12 @@ font-size: 24px;
 color: #333;
 }
 
-.weather-info {
+.weather-info-london{
 display: flex;
 flex-direction: column;
 align-items: center;
 height: 650px;
-background-image: url("images/weather-widget-1.png");
+background-image: url("images/weather-widget-2.png");
 background-size: cover;
 background-position: center;
 border-radius: 15px;
