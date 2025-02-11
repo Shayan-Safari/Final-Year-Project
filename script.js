@@ -9,6 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
         'Canberra': 'canberra'
     };
 
+    const weatherBackgrounds = {
+        'clear': 'images/sunny.jpg',
+        'clouds': 'images/cloudy.jpg',
+        'rain': 'images/rainy.jpg',
+        'snow': 'images/snowy.jpg',
+        'thunderstorm': 'images/thunderstorm.jpg',
+        'drizzle': 'images/drizzle.jpg',
+        'mist': 'images/mist.jpg'
+    };
+
     cities.forEach(city => {
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -17,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 const cityId = cityIds[city];
                 const weatherDescription = data.weather[0].description;
+                const weatherMain = data.weather[0].main.toLowerCase();
                 const temperature = data.main.temp;
                 const humidity = data.main.humidity;
                 const windSpeed = data.wind.speed;
@@ -25,6 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById(`temperature-${cityId}`).textContent = `Temperature: ${temperature}°C`;
                 document.getElementById(`humidity-${cityId}`).textContent = `Humidity: ${humidity}%`;
                 document.getElementById(`wind-speed-${cityId}`).textContent = `Wind Speed: ${windSpeed} m/s`;
+
+                const weatherWidget = document.getElementById(`weather-${cityId}`);
+                const backgroundImage = weatherBackgrounds[weatherMain] || 'images/default-weather.jpg';
+                weatherWidget.style.backgroundImage = `url(${backgroundImage})`;
             })
             .catch(error => {
                 console.error(`Error fetching weather data for ${city}:`, error);

@@ -17,7 +17,8 @@
             text-align: center;
             text-overflow: ellipsis;   
             font-size: larger;
-            color: white;
+            background-color: #2d545e;
+            color: rgb(251, 251, 251);
         }
     </style>
     
@@ -39,7 +40,7 @@
 
 
     <div class="container">
-        <form action="submit_form.html" method="post" style="grid-column: 1; grid-row: 1;">
+        <form action="submit_form.html" method="post" class="form-grid">
             <label for="selection">Select Form:</label>
             <select id="selection" name="selection">
                 <option value="feedback">Feedback</option>
@@ -62,14 +63,12 @@
             <button type="submit">Submit</button>
         </form>
 
-        <div class="container" style="grid-column: 2; grid-row: 1;">
+        <div class="container grid-position">
             
             <p>
                 Welcome to the Headline Hub, your go-to destination for the latest and most relevant news from around the world. 
                 Our mission is to provide comprehensive coverage across a variety of genres, 
                 ensuring that you stay informed and engaged with the stories that matter to you.
-            </p> 
-            <p>
                 With a user-friendly design and easy navigation, we curate articles from trusted sources and offer insightful commentary,
                 making it easier than ever to access the information you seek. 
                 Join us as we explore diverse perspectives and keep you updated on both local and global happenings. 
