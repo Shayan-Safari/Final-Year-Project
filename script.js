@@ -91,4 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const accessibilityButton = document.getElementById('accessibility-button');
+    accessibilityButton.addEventListener('click', function() {
+        document.body.classList.toggle('accessibility-mode');
+    });
+});

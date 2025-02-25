@@ -336,7 +336,28 @@ background-color: #555;
 }
         
 
+/* Accessibility Style */
+.accessibility-mode {
+background-color: black;
+color: white;
+}
 
+.accessibility-mode a {
+color: #00f; /* Adjust link color for better visibility */
+}
+
+.accessibility-mode header,
+.accessibility-mode footer,
+.accessibility-mode .container,
+.accessibility-mode .news-block,
+.accessibility-mode .weather-block {
+background-color: black;
+color: white;
+}
+
+.accessibility-mode .flexslider .slides img {
+filter: brightness(0.5); /* Adjust image brightness for better contrast */
+}
 
 
 
