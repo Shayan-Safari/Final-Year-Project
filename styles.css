@@ -196,6 +196,12 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 animation: fadeIn 1s ease-in-out; /* Fade-in animation */
 }
 
+.weather-block p {
+background-color: #f4f4f4;
+color: #333;
+font-weight: bold;
+}
+
 .weather-widget {
 display: flex;
 flex-direction: column;
@@ -338,16 +344,17 @@ background-color: #555;
 
 /* Accessibility Style */
 .accessibility-mode {
-background-color: black;
+background-color: rgb(78, 77, 77);
 color: white;
 }
 
 .accessibility-mode a {
-color: #00f; /* Adjust link color for better visibility */
+color: blue; /* Adjust link color for better visibility */
 }
 
 .accessibility-mode header,
 .accessibility-mode footer,
+.accessibility-mode form,
 .accessibility-mode .container,
 .accessibility-mode .news-block,
 .accessibility-mode .weather-block {

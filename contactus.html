@@ -21,7 +21,15 @@
             color: rgb(251, 251, 251);
         }
     </style>
-    <script src="script.js" defer> </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    
+            const accessibilityButton = document.getElementById('accessibility-button');
+                accessibilityButton.addEventListener('click', function() {
+                document.body.classList.toggle('accessibility-mode');
+            });
+        });
+    </script>
     
 </head>
 

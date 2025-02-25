@@ -41,3 +41,12 @@ $(document).ready(function() {
     checkPosition(); // Initial check
     handleScroll(); // Initial check for header
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const accessibilityButton = document.getElementById('accessibility-button');
+        accessibilityButton.addEventListener('click', function() {
+        document.body.classList.toggle('accessibility-mode');
+    });
+});
