@@ -158,7 +158,18 @@ footer form button:hover {
 background-color: #555;
 }
 
+/* STYLE Of FLEX SLIDER */
 
+.flexslider .slides img {
+max-width: 96%;  
+margin: 0 auto;
+}
+.flexslider p {
+color: #333;
+font-size: 18px;
+font-weight: bold;
+text-align: center;
+}
 
 /* STYLE Of CLASSES */
 .container {
@@ -179,6 +190,10 @@ box-sizing: border-box;
 text-align: center;
 height: 400px;
 width: 390px;
+}
+
+.news-block img {
+width: 100%;    
 }
         
 .weather-block{

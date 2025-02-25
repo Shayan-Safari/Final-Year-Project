@@ -3,43 +3,76 @@ session_start();
 include 'db_connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $formType = $_POST['form_type'];
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Prepare and bind
-    $hashed_input = hash("sha256", $password);
-    $stmt = $conn->prepare("SELECT id FROM users WHERE username = ? AND password = ?");
-    $stmt->bind_param("ss", $username, $hashed_input);
+    if ($formType == 'register') {
+        $email = $_POST['email'];
+        $confirmPassword = $_POST['confirm_password'];
 
-    // Execute the statement
-    $stmt->execute();
-    $stmt->store_result();
+        if ($password !== $confirmPassword) {
+            echo "Passwords do not match.";
+            exit();
+        }
 
-    if ($stmt->num_rows > 0) {
-        $_SESSION['username'] = $username;
-        header("Location: user_dashboard.php"); // Redirect to admin dashboard
-    } else {
-        echo "Invalid username or password";
+        // Check if the username or email already exists
+        $stmt = $conn->prepare("SELECT id FROM users WHERE username = ? OR email = ?");
+        $stmt->bind_param("ss", $username, $email);
+        $stmt->execute();
+        $stmt->store_result();
+
+        if ($stmt->num_rows > 0) {
+            echo "Username or email already exists.";
+            $stmt->close();
+            $conn->close();
+            exit();
+        }
+
+        $stmt->close();
+
+        // Hash the password using sha256
+        $hashedPassword = hash("sha256", $password);
+
+        // Insert the user into the database
+        $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $username, $email, $hashedPassword);
+
+        if ($stmt->execute()) {
+            echo "Registration successful!";
+            header("Location: userlogin.html"); // Redirect to login page after registration
+            exit();
+        } else {
+            echo "Error: " . $stmt->error;
+        }
+
+        $stmt->close();
+    } elseif ($formType == 'login') {
+        // Hash the input password using sha256
+        $hashed_input = hash("sha256", $password);
+
+        // Prepare and bind
+        $stmt = $conn->prepare("SELECT id FROM users WHERE username = ? AND password = ?");
+        $stmt->bind_param("ss", $username, $hashed_input);
+
+        // Execute the statement
+        $stmt->execute();
+        $stmt->store_result();
+
+        if ($stmt->num_rows > 0) {
+            $_SESSION['username'] = $username;
+            $stmt->bind_result($userId);
+            $stmt->fetch();
+            $_SESSION['user_id'] = $userId;
+            header("Location: user_dashboard.php"); // Redirect to user dashboard
+            exit();
+        } else {
+            echo "Invalid username or password";
+        }
+
+        $stmt->close();
     }
 
-
-    // Debugging
-    echo "Debug: Username - " . $username . "<br>";
-    echo "Debug: Hashed Input - " . $hashed_input . "<br>";
-
-    $stmt = $conn->prepare("SELECT password FROM users WHERE username = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($row = $result->fetch_assoc()) {
-        echo "Debug: Stored Hash - " . $row["password"] . "<br>";
-    } else {
-        echo "Debug: Username not found.";
-    }
-    exit();
-
-    $stmt->close();
     $conn->close();
 }
 ?>
