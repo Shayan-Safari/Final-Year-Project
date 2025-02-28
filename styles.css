@@ -179,25 +179,18 @@ body{
     text-align: center;
     }
 
-    .home-slider .flexslider, 
-    .home-slider .weather-block {
+    .home-slider #weather-forecast {
     margin: 0;
     padding: 0;
-    height: 350px;
+    margin-left: 30px;
+    height: 500px;
     width: 80%;
     }
 
-    .home-slider .flexslider ul li{
-    height: 450px;
+    .home-slider .weather-block .flexslider {
+    height: 525px;
     }   
 
-    .home-slider .flexslider .slides img {
-    max-width: 94%;  
-    margin: 0 auto;
-    border-radius: 15px;
-    padding: 15px;
-    background-color: #2d545e;
-    }
 
     .home-slider .flexslider p {
     color: #333;
@@ -215,11 +208,21 @@ body{
     padding: 10px;
     height: 450px;  
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 110px;
+    }
+
+    .home-slider .flexslider .slides img {
+    max-width: 94%;
+    height: 450px;  
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #2d545e;
     }
 
     .home-slider #home {
-    width: 720px;
+    width: 800px;
+    height: 530px;
     }
     
     .home-slider .flexslider {
@@ -296,7 +299,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 400px;
+    height: 470px;
     width: 100%;
     box-sizing: border-box;
     border-radius: 25px;
@@ -304,14 +307,16 @@ body{
     }
 
     #weather-forecast {
-    margin-left: 50px;
+    margin-left: 90px;
     width: 70%;
     }
     
-    .weather-block .slides {    
+    .weather-block .slides {  
+    justify-content: center; 
+    text-align: center; 
     border-radius: 35px;
-    background-color: #2d545e;
-    height: 400px;
+    background-color: #f4f5f6;
+    height: 380px;
     }
     
     .weather-widget h2 {
@@ -466,6 +471,21 @@ body{
     background-color: #555;
     }
 
+    .toggle-link {
+        text-align: center;
+        margin-top: 10px;
+        cursor: pointer;
+        color: #007BFF;
+    }
+
+    .toggle-link:hover {
+        text-decoration: underline;
+    }
+
+    .hidden {
+        display: none;
+    }
+
     .contact-info, 
     .container #contact p {
     text-align: center;
@@ -493,10 +513,14 @@ body{
     .accessibility-mode header,
     .accessibility-mode footer,
     .accessibility-mode form,
-    .accessibility-mode .container,
+    .accessibility-mode .container #contact p,
+    .accessibility-mode .container .contact-info p,
     .accessibility-mode .news-block,
-    .accessibility-mode .weather-block {
-    background-color: black;
+    .accessibility-mode .flexslider .slides,
+    .accessibility-mode .flexslider p,
+    .accessibility-mode .weather-block,
+    .accessibility-mode .weather-block h2 {
+    background-color: rgb(54, 52, 52);
     color: white;
     }
     

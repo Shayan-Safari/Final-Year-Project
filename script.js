@@ -92,9 +92,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+    const toggleLink = document.getElementById('toggle-link');
+    const formType = document.getElementById('form-type');
+    const formTitle = document.getElementById('form-title');
+    const registerFields = document.getElementById('register-fields');
+
+toggleLink.addEventListener('click', function() {
+    if (formType.value === 'login') {
+        formType.value = 'register';
+        formTitle.textContent = 'Register';
+        registerFields.classList.remove('hidden');
+        toggleLink.textContent = 'Already have an account? Login here';
+    } else {
+        formType.value = 'login';
+        formTitle.textContent = 'Login';
+        registerFields.classList.add('hidden');
+        toggleLink.textContent = 'Don\'t have an account? Register here';
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
     
     const accessibilityButton = document.getElementById('accessibility-button');
     accessibilityButton.addEventListener('click', function() {
         document.body.classList.toggle('accessibility-mode');
     });
 });
+
