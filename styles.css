@@ -259,7 +259,7 @@ body{
     height: calc(100vh - 50px); /* Full viewport height minus the header and footer */
     padding: 32px;
     margin: 20px;
-    padding-bottom: 35px;
+    padding-bottom: 40px;
     }
     
     .news-block{
@@ -408,9 +408,25 @@ body{
     gap: 10px;
     padding: 40px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    width: 500px; /* Optional: limit the maximum width of the form */
+    border-radius: 25px;
+    background-color: #ced0d0;
+    width: 400px; /* Optional: limit the maximum width of the form */
+    }
+
+    #user-form {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    }
+
+    #admin-form {
+    margin-left: 70px;
+    margin-bottom: -100px;
+    }
+
+    #user-form .container {
+    padding-left: 400px;
+    margin-bottom: -100px;
     }
     
     

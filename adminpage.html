@@ -13,7 +13,9 @@
             background-position: center; /* Center the background image */
             background-repeat: no-repeat; /* Prevent the background image from repeating */
             background-attachment: fixed; /* Make the background image fixed */
+            max-width: 100%;
             }
+
     </style>
     <script src="script.js" defer> </script>
 </head>
@@ -31,37 +33,40 @@
         </nav>
     </header>
 
-    <div class="container">
-        <!-- Form for logging into phpMyAdmin -->
-            <form action="login_db.php" method="post" class="form-item">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-    
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-    
-                <button type="submit">Login to Admin Dashboard</button>
-            </form>
-
-        <!-- Form for admin tasks -->
-            <form action="admin_action.html" method="post" class="form-item">
-                <label for="admin-task">Select Task:</label>
-                <select id="admin-task" name="admin-task">
-                    <option value="add-news">Add News</option>
-                    <option value="edit-news">Edit News</option>
-                    <option value="delete-news">Delete News</option>
-                </select>
-    
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required>
-    
-                <label for="content">Content:</label>
-                <textarea id="content" name="content" rows="4" required></textarea>
-    
-                <button type="submit">Submit</button>
-            </form>
+    <div id="admin-form">
+        <div class="container">
+            <!-- Form for logging into phpMyAdmin -->
+                <form action="login_db.php" method="post" class="form-item">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
         
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+        
+                    <button type="submit">Login to Admin Dashboard</button>
+                </form>
+    
+            <!-- Form for admin tasks -->
+                <form action="admin_action.html" method="post" class="form-item">
+                    <label for="admin-task">Select Task:</label>
+                    <select id="admin-task" name="admin-task">
+                        <option value="add-news">Add News</option>
+                        <option value="edit-news">Edit News</option>
+                        <option value="delete-news">Delete News</option>
+                    </select>
+        
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+        
+                    <label for="content">Content:</label>
+                    <textarea id="content" name="content" rows="4" required></textarea>
+        
+                    <button type="submit">Submit</button>
+                </form>
+            
+        </div>
     </div>
+    
 
     <footer>
         <p>Follow us on:</p>

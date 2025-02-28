@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
+        body{
+            max-width: 100%;
+        }
+
         .toggle-link {
             text-align: center;
             margin-top: 10px;
@@ -75,29 +79,32 @@
         </nav>
     </header>
 
-    <div class="container">
-        <form id="user-form" action="user_action.php" method="POST">
-            <h2 id="form-title">Login</h2>
-            <input type="hidden" id="form-type" name="form_type" value="login">
-            <label for="username">Username:</label>
-
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-
-            <input type="password" id="password" name="password" required>
-
-            <div id="register-fields" class="hidden">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm_password">
-            </div>
-
-            <button type="submit">Submit</button>
-
-            <div class="toggle-link" id="toggle-link">Don't have an account? Register here</div>
-        </form>
+    <div id="user-form">
+        <div class="container">
+            <form id="user-form" action="user_action.php" method="POST">
+                <h2 id="form-title">Login</h2>
+                <input type="hidden" id="form-type" name="form_type" value="login">
+                <label for="username">Username:</label>
+    
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+    
+                <input type="password" id="password" name="password" required>
+    
+                <div id="register-fields" class="hidden">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm_password">
+                </div>
+    
+                <button type="submit">Submit</button>
+    
+                <div class="toggle-link" id="toggle-link">Don't have an account? Register here</div>
+            </form>
+        </div>
     </div>
+    
 
 
     <footer>
