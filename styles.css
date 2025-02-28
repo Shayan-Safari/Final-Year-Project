@@ -1,389 +1,489 @@
 /* STYLE Of BODY */
 body{
-background-color: #e1b382; /* Light grey background */
-color: #03191e; /* Dark grey text */
-background-image: url("images/wallpaper.jpg"); /* Set the background image */
-background-size: cover; /* Ensure the image covers the entire background */
-background-position: center; /* Center the background image */
-background-repeat: no-repeat; /* Prevent the background image from repeating */
-background-attachment: fixed; /* Make the background image fixed */
-font-family: 'Helvetica', sans-serif; /* Use a sans-serif font */
-margin: 0;
-padding: 0;
-display: flex;
-flex-direction: column;
-}
-
-
-/* STYLE Of Header */
-header{
-background-color: #2d545e;
-color: white;
-border: solid 1px #333;
-padding: 10px 20px;
-text-align: center;
-}
-
-header.shrink {
-height: 50px; /* Adjust the height as needed */
-padding: 5px 20px;
-}
-
-header h1{
-color: white(0, 0%, 99%, 0.98);    
-}
-
-header.shrink h1 {
-opacity: 0; /* Hide the title when the header shrinks */
-}
-
-/* STYLE Of NAVIGATION BAR */        
-nav{
-margin: 10px 0;
-text-align: center;
-width: 100%;
-}
-        
-nav a{
-color: white;
-padding: 15px;
-text-decoration: none;
-display: inline-block;
-vertical-align: middle;
-line-height: 20%;
-}
-        
-nav a:hover{
-background-color: #e7ded5;
-color: #03191e;
-}
-
-#left {
-float: left
-}
-
-#right {
-float: right
-}
-
-.animate-on-scroll {
-opacity: 0;
-transform: translateY(20px);
-transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.animate-on-scroll.animate {
-opacity: 1;
-transform: translateY(0);
-}
-
-
-
-/* STYLE Of SLIDER */
-
-        
-
-/* STYLE Of FOOTER */
-footer{
-background-color: #2d545e;
-color: white;
-border: solid 1px #333;
-text-align: center;
-padding: 10px;
-position: relative;
-bottom: 0;
-top: 150px;
-width: 100%;
-}
-
-footer p{
-color: white; 
-text-decoration: none; 
-}
-
-footer a {
-color: white; 
-padding: 10px;
-text-decoration: none; 
-}
-
-footer a:hover {
-background-color: #e7ded5;
-color: #03191e;
-}
-
-footer nav {
-display: flex;
-flex-direction: column;
-align-items: center; /* Center the links horizontally */
-}
-
-footer nav a {
-margin: 5px 0; /* Add some space between the links */
-}
-
-
-/* STYLE Of FORMS */
-footer form {
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 20px;
-}
-
-footer form label {
-margin-bottom: 10px;
-color: white;
-}
-
-footer form input[type="email"] {
-padding: 10px;
-margin-bottom: 10px;
-border: 1px solid #ccc;
-border-radius: 5px;
-width: 80%;
-max-width: 300px;
-}
-
-footer form button {
-padding: 10px 20px;
-background-color: #333;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-}
-
-footer form button:hover {
-background-color: #555;
-}
-
-/* STYLE Of FLEX SLIDER */
-
-.flexslider .slides img {
-max-width: 96%;  
-margin: 0 auto;
-}
-.flexslider p {
-color: #333;
-font-size: 18px;
-font-weight: bold;
-text-align: center;
-}
-
-/* STYLE Of CLASSES */
-.container {
-display: grid;
-grid-template-columns: repeat(2, 1fr); /* Create a single column */
-grid-template-rows: repeat(2, 1fr); /* Create two rows */
-grid-gap: 20px; /* Add space between the grid items */
-height: calc(100vh - 50px); /* Full viewport height minus the header and footer */
-padding: 20px;
-margin: 20px;
-}
-
-.news-block{
-background-color: #f4f4f4;
-border: 1px solid #ccc;
-padding: 10px;
-box-sizing: border-box;
-text-align: center;
-height: 400px;
-width: 390px;
-}
-
-.news-block img {
-width: 100%;    
-}
-        
-.weather-block{
-background-color: #eaeaea;
-border: 1px solid #ccc;
-padding: 10px;
-box-sizing: border-box;
-text-align: center;
-grid-column: 3;
-grid-row: 1 / span 2; /* Span from top to bottom */
-margin: 0;
-width: 300px;
-border-radius: 15px; /* Rounded corners */
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-animation: fadeIn 1s ease-in-out; /* Fade-in animation */
-}
-
-.weather-block p {
-background-color: #f4f4f4;
-color: #333;
-font-weight: bold;
-}
-
-.weather-widget {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-.weather-block .slides {
-height: 750px;
-}
-
-.weather-widget h2 {
-margin-bottom: 10px;
-font-size: 24px;
-color: #333;
-}
-
-.weather-info-london{
-display: flex;
-flex-direction: column;
-align-items: center;
-height: 650px;
-background-size: cover;
-background-position: center;
-border-radius: 15px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-animation: fadeIn 1s ease-in-out;
-margin-bottom: 20px;
-}
-
-.weather-info-berlin {
-display: flex;
-flex-direction: column;
-align-items: center;
-height: 650px;
-background-size: cover;
-background-position: center;
-border-radius: 15px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-animation: fadeIn 1s ease-in-out;
-margin-bottom: 20px;
-}
-
-.weather-info-paris {
-display: flex;
-flex-direction: column;
-align-items: center;
-height: 650px;
-background-size: cover;
-background-position: center;
-border-radius: 15px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-animation: fadeIn 1s ease-in-out;
-margin-bottom: 20px;
-}
-
-.weather-info-canberra {
-display: flex;
-flex-direction: column;
-align-items: center;
-height: 650px;
-background-size: cover;
-background-position: center;
-border-radius: 15px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-animation: fadeIn 1s ease-in-out;
-margin-bottom: 20px;
-}
-
-.weather-info p {
-margin: 5px 0;
-font-size: 18px;
-color: #555;
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+    width: 100%;
+    max-width: fit-content;
+    background-color: #e1b382; /* Light grey background */
+    color: #03191e; /* Dark grey text */
+    background-image: url("images/wallpaper.jpg"); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Make the background image fixed */
+    font-family: 'Helvetica', sans-serif; /* Use a sans-serif font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    
+    /* STYLE Of Header */
+    header{
+    background-color: #2d545e;
+    color: white;
+    font-size: large;
+    border: solid 1px #333;
+    border-radius: 25px;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
     }
-}
+    
+    header.shrink {
+    height: 50px; /* Adjust the height as needed */
+    padding: 5px 20px;
+    }
+    
+    header h1{
+    color: white(0, 0%, 99%, 0.98);    
+    }
+    
+    header.shrink h1 {
+    opacity: 0; /* Hide the title when the header shrinks */
+    }
+    
+    /* STYLE Of NAVIGATION BAR */        
+    nav{
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+    }
+            
+    nav a{
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20%;
+    }
+            
+    nav a:hover{
+    background-color: #e7ded5;
+    color: #03191e;
+    }
+    
+    #left {
+    float: left
+    }
+    
+    #right {
+    float: right
+    }
+    
+    .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    
+    
+            
+    
+    /* STYLE Of FOOTER */
+    footer{
+    background-color: #2d545e;
+    color: white;
+    border: solid 1px #333;
+    border-radius: 25px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    top: 150px;
+    width: 100%;
+    box-sizing: border-box;
+    }
+    
+    footer p{
+    color: white; 
+    text-decoration: none; 
+    }
+    
+    footer a {
+    color: white; 
+    padding: 10px;
+    text-decoration: none; 
+    }
+    
+    footer a:hover {
+    background-color: #e7ded5;
+    color: #03191e;
+    }
+    
+    footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the links horizontally */
+    }
+    
+    footer nav a {
+    margin: 5px 0; /* Add some space between the links */
+    }
+    
+    
+    /* STYLE Of FORMS */
+    footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    }
+    
+    footer form label {
+    margin-bottom: 10px;
+    color: white;
+    }
+    
+    footer form input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 300px;
+    }
+    
+    footer form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    footer form button:hover {
+    background-color: #555;
+    }
+    
 
 
-/* STYLE Of FORMS */
-.container form {
-display: flex;
-flex-direction: column;
-justify-content: center; /* Center horizontally */
-align-items: center; /* Center vertically */
-height: 80vh; /* Full viewport height */
-gap: 10px;
-padding: 40px;
-border: 1px solid #ccc;
-border-radius: 5px;
-background-color: #f9f9f9;
-width: 500px; /* Optional: limit the maximum width of the form */
-}
+    /* STYLE Of FLEX SLIDER */
 
+    .flexslider .slides img {
+    max-width: 96%;  
+    margin: 0 auto;
+    }
+    .flexslider p {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    }
 
-.container form label {
-margin-bottom: 5px;
-font-weight: bold;
-}
+    .home-slider .flexslider, 
+    .home-slider .weather-block {
+    margin: 0;
+    padding: 0;
+    height: 350px;
+    width: 80%;
+    }
 
-.container form input,
-.container form select {
-padding: 10px;
-border: 1px solid #ccc;
-border-radius: 5px;
-width: 100%;
-box-sizing: border-box;
-}
+    .home-slider .flexslider ul li{
+    height: 450px;
+    }   
 
-.container form textarea {
-padding: 10px;
-border: 1px solid #ccc;
-border-radius: 5px;
-width: 100%;
-height: 150px;
-box-sizing: border-box;
-}
+    .home-slider .flexslider .slides img {
+    max-width: 94%;  
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #2d545e;
+    }
 
-.container form button {
-padding: 10px 20px;
-background-color: #333;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-}
+    .home-slider .flexslider p {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    }
 
-.container form button:hover {
-background-color: #555;
-}
-        
+    .home-slider {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 10px;
+    height: 450px;  
+    margin-top: 20px;
+    margin-bottom: 50px;
+    }
 
-/* Accessibility Style */
-.accessibility-mode {
-background-color: rgb(78, 77, 77);
-color: white;
-}
+    .home-slider #home {
+    width: 720px;
+    }
+    
+    .home-slider .flexslider {
+    margin: 0 auto;
+    border-radius: 5%;
+    height: 450px;
+    width: 96%;
+    padding: 15px;
+    }
 
-.accessibility-mode a {
-color: blue; /* Adjust link color for better visibility */
-}
+    .container .slides,
+    .container .flex-control-nav,
+    .container .flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
 
-.accessibility-mode header,
-.accessibility-mode footer,
-.accessibility-mode form,
-.accessibility-mode .container,
-.accessibility-mode .news-block,
-.accessibility-mode .weather-block {
-background-color: black;
-color: white;
-}
+    .container .flexslider {
+    margin: 0;
+    padding: 0;
+    border-radius: 25px;
+    }
 
-.accessibility-mode .flexslider .slides img {
-filter: brightness(0.5); /* Adjust image brightness for better contrast */
-}
+    .container .news-block .slides {
+    height: 350px;
+     border-radius: 25px;
+    }
 
+    
+    /* STYLE Of CLASSES */
+    .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create a single column */
+    grid-template-rows: repeat(2, 1fr); /* Create two rows */
+    grid-gap: 20px; /* Add space between the grid items */
+    height: calc(100vh - 50px); /* Full viewport height minus the header and footer */
+    padding: 32px;
+    margin: 20px;
+    padding-bottom: 35px;
+    }
+    
+    .news-block{
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 25px;
+    height: 400px;
+    width: 390px;
+    }
 
+    .container #bold {
+    font-weight: bold;
+    }
 
+    .container #lighter {
+    font-weight: lighter;
+    }
+    
+    .news-block img {
+    width: 100%;   
+    border-radius: 25px; 
+    }
+            
+    .weather-block p {
+    background-color: #f4f4f4;
+    color: #070000;
+    font-weight: bold;
+    }
+    
+    .weather-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 20px;
+    }
 
+    #weather-forecast {
+    margin-left: 50px;
+    width: 70%;
+    }
+    
+    .weather-block .slides {    
+    border-radius: 35px;
+    background-color: #2d545e;
+    height: 400px;
+    }
+    
+    .weather-widget h2 {
+    background-color: rgb(212, 210, 210);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    }
+    
+    .weather-info-london{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(212, 210, 210);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 20px;
+    }
+    
+    .weather-info-berlin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(212, 210, 210);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 20px;
+    }
+    
+    .weather-info-paris {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(212, 210, 210);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 20px;
+    }
+    
+    .weather-info-canberra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(212, 210, 210);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    margin-bottom: 20px;
+    }
+    
+    .weather-info p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #555;
+    }
+    
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    
+    /* STYLE Of FORMS */
+    .container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 80vh; /* Full viewport height */
+    gap: 10px;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 500px; /* Optional: limit the maximum width of the form */
+    }
+    
+    
+    .container form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    }
+    
+    .container form input,
+    .container form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    }
+    
+    .container form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    }
+    
+    .container form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    .container form button:hover {
+    background-color: #555;
+    }
 
+    .contact-info, 
+    .container #contact p {
+    text-align: center;
+    text-overflow: ellipsis;   
+    font-size: large;
+    color: rgb(251, 251, 251);
+    }
 
-
+    #contact {
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    }
+            
+    
+    /* Accessibility Style */
+    .accessibility-mode {
+    background-color: rgb(78, 77, 77);
+    color: white;
+    }
+    
+    .accessibility-mode a {
+    color: rgb(234, 234, 239); /* Adjust link color for better visibility */
+    }
+    
+    .accessibility-mode header,
+    .accessibility-mode footer,
+    .accessibility-mode form,
+    .accessibility-mode .container,
+    .accessibility-mode .news-block,
+    .accessibility-mode .weather-block {
+    background-color: black;
+    color: white;
+    }
+    
+    .accessibility-mode .flexslider .slides img {
+    filter: brightness(0.5); /* Adjust image brightness for better contrast */
+    }

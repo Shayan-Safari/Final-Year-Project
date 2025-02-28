@@ -13,23 +13,6 @@
             background-repeat: no-repeat; /* Prevent the background image from repeating */
             background-attachment: fixed; /* Make the background image fixed */
             }
-        .slides,
-        .flex-control-nav,
-        .flex-direction-nav {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .flexslider {
-            margin: 0;
-            padding: 0;
-        }
-
-        .news-block .slides {
-            height: 350px;
-        }
-        
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.css"> <!-- Flexslider stylesheet -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
@@ -57,9 +40,20 @@
         <div class="news-block" style="grid-column: 1; grid-row: 1;">
             <div class="flexslider">
                 <ul class="slides"> <!-- Slides should have the class 'slides' -->
-                    <li><img src="images/image8.jpg" alt="News 1"><p>What's at stake for Europe after the German election?</p></li>
-                    <li><img src="images/image9.jpg" alt="News 2"><p>Suspected Hamas members face terror trial in Germany over arms caches</p></li>
-                    <li><img src="images/image10.jpg" alt="News 3"><p>US judge refuses to overturn Trump's AP White House ban</p></li>
+                    <li><img src="images/image8.jpg" alt="News 1">
+                        <p id="bold">What's at stake for Europe after the German election?</p>
+                        <p id="lighter">Can Europe build a credible nuclear deterrent without US support?</p>       
+                    </li>
+
+                    <li><img src="images/image9.jpg" alt="News 2">
+                        <p id="bold">Suspected Hamas members face terror trial in Germany over arms caches</p>
+                        <p id="lighter">Israeli army inquiry reveals failures over 7 October attack by Hamas</p>
+                    </li>
+
+                    <li><img src="images/image10.jpg" alt="News 3">
+                        <p id="bold">US judge refuses to overturn Trump's AP White House ban</p>
+                        <p id="lighter">US President Donald Trump says ending the war in Ukraine could either happen fairly soon.</p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -67,9 +61,20 @@
         <div class="news-block" style="grid-column: 1; grid-row: 2;">
             <div class="flexslider">
                 <ul class="slides"> <!-- Slides should have the class 'slides' -->
-                    <li><img src="images/image11.jpg" alt="News 1"><p>Conservative EPP confident of success in EU deregulation push</p></li>
-                    <li><img src="images/image12.jpg" alt="News 2"><p>Housing crisis: EU can do 'much more' than build new homes, says MEP</p></li>
-                    <li><img src="images/image13.jpg" alt="News 3"><p>App store age check could help children online protection: Meta VP</p></li>
+                    <li><img src="images/image11.jpg" alt="News 1">
+                        <p id="bold">Conservative EPP confident of success in EU deregulation push</p>
+                        <p id="lighter">It's no secret that property prices have soared across the European Union in recent years.</p>
+                    </li>
+
+                    <li><img src="images/image12.jpg" alt="News 2">
+                        <p id="bold">Housing crisis: EU can do 'much more' than build new homes, says MEP</p>
+                        <p id="lighter">In Berceni, north of Bucharest, Valentin and Gabriela Alexe and their two daughters have been living happily in their house for a year.</p>
+                    </li>
+
+                    <li><img src="images/image13.jpg" alt="News 3">
+                        <p id="bold">App store age check could help children online protection: Meta VP</p>
+                        <p id="lighter">Global language learning company Duolingo reported revenue of $748m (€719.7m) for the financial year 2024, which was a surge of 41% on an annual basis. </p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -77,9 +82,20 @@
         <div class="news-block" style="grid-column: 2; grid-row: 1;">
             <div class="flexslider">
                 <ul class="slides"> <!-- Slides should have the class 'slides' -->
-                    <li><img src="images/image14.jpg" alt="News 1"><p>Forget the Colosseum: This Roman amphitheatre is a lost treasure</p></li>
-                    <li><img src="images/image15.jpg" alt="News 2"><p>New direct trains could soon link London with these European cities</p></li>
-                    <li><img src="images/image16.jpg" alt="News 3"><p>From key box bans to new taxes, Italy is getting tough on overtourism</p></li>
+                    <li><img src="images/image14.jpg" alt="News 1">
+                        <p id="bold">Forget the Colosseum: This Roman amphitheatre is a lost treasure</p>
+                        <p id="lighter">Moving to a new country can be daunting, but Mercer’s annual Quality of Living Report helps ease the decision-making process. </p>
+                    </li>
+
+                    <li><img src="images/image15.jpg" alt="News 2">
+                        <p>New direct trains could soon link London with these European cities</p>
+                        <p id="lighter">British Airways is terrible value for money, has uncomfortable seats, and lousy food and drink. </p>
+                    </li>
+
+                    <li><img src="images/image16.jpg" alt="News 3">
+                        <p id="bold">From key box bans to new taxes, Italy is getting tough on overtourism</p>
+                        <p id="lighter">Travel in Europe is getting more complicated to navigate for tourists. Some cities now charge a daily tourist tax that you have to pay on arrival. </p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -87,9 +103,21 @@
         <div class="news-block" style="grid-column: 2; grid-row: 2;">
             <div class="flexslider">
                 <ul class="slides"> <!-- Slides should have the class 'slides' -->
-                    <li><img src="images/image17.jpg" alt="News 1"><p>Martin Scorsese and Steven Spielberg petition to save Rome’s cinemas</p></li>
-                    <li><img src="images/image18.jpg" alt="News 2"><p>2,000-year-old Roman gossip book makes UK bestseller charts</p></li>
-                    <li><img src="images/image19.jpg" alt="News 3"><p>Major exhibition in Berlin showcases abstract Kandinsky masterpieces</p></li>
+                    <li><img src="images/image17.jpg" alt="News 1">
+                        <p id="bold">Martin Scorsese and Steven Spielberg petition to save Rome’s cinemas</p>
+                        <p id="lighter">CODA is a very tender, Sundance-by-numbers coming-of-age movie that defied the odds to make history
+                             as the first Best Picture winner ever released. </p>
+                    </li>
+
+                    <li><img src="images/image18.jpg" alt="News 2">
+                        <p id="bold">2,000-year-old Roman gossip book makes UK bestseller charts</p>
+                        <p id="lighter">A new exhibition at Rome's Palazzo Bonaparte showcases 100 works by Edvard Munch.</p>
+                    </li>
+
+                    <li><img src="images/image19.jpg" alt="News 3">
+                        <p id="bold">Major exhibition in Berlin showcases abstract Kandinsky masterpieces</p>
+                        <p id="lighter">Museum Barberini in Berlin is presenting 'Kandinsky’s Universe: Geometrical Abstraction in the 20th Century.</p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -97,9 +125,20 @@
         <div class="news-block" style="grid-column: 3; grid-row: 1;">
             <div class="flexslider">
                 <ul class="slides"> <!-- Slides should have the class 'slides' -->
-                    <li><img src="images/image20.jpg" alt="News 1"><p>Key talks on next landmark IPCC climate report begin in China</p></li>
-                    <li><img src="images/image21.jpg" alt="News 2"><p>Extreme heat forces South Sudan to close schools for two weeks</p></li>
-                    <li><img src="images/image22.jpg" alt="News 3"><p>Greenpeace says oil pipeline lawsuit threatens its future</p></li>
+                    <li><img src="images/image20.jpg" alt="News 1">
+                        <p id="bold">Key talks on next landmark IPCC climate report begin in China</p>
+                        <p id="lighter">While New York and London lead the way, Madrid and Argentina surprisingly rank high as popular filming locations.</p>
+                    </li>
+
+                    <li><img src="images/image21.jpg" alt="News 2">
+                        <p id="bold">Extreme heat forces South Sudan to close schools for two weeks</p>
+                        <p id="lighter">South Sudan closed all schools Thursday for two weeks due to an extreme heat wave that has caused some students to collapse.</p>
+                    </li>
+
+                    <li><img src="images/image22.jpg" alt="News 3">
+                        <p id="bold">Greenpeace says oil pipeline lawsuit threatens its future</p>
+                        <p id="lighter">The negotiations will not be easy, but India and the EU seem determined to sign a major trade agreement by the end of the year.</p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -107,9 +146,22 @@
         <div class="news-block" style="grid-column: 3; grid-row: 2;">
             <div class="flexslider">
                 <ul class="slides"> <!-- Slides should have the class 'slides' -->
-                    <li><img src="images/image23.jpg" alt="News 1"><p>Euroviews. If Europe could sanction Putin, it can do the same for Bangladesh</p></li>
-                    <li><img src="images/image24.jpg" alt="News 2"><p>Euroviews. Donald Trump’s Davos speech: Should Europe really fear tariffs?</p></li>
-                    <li><img src="images/image25.jpg" alt="News 3"><p>Euroviews. The Clean Industrial Deal could enhance competitiveness and resilience</p></li>
+                    <li><img src="images/image23.jpg" alt="News 1">
+                        <p id="bold">If Europe could sanction Putin, it can do the same for Bangladesh</p>
+                        <p id="lighter">Bangladesh’s new government says that nearly $248 billion (€237bn) was stolen by her and her cronies.</p>
+                    </li>
+
+                    <li><img src="images/image24.jpg" alt="News 2">
+                        <p id="bold">Donald Trump’s Davos speech: Should Europe really fear tariffs?</p>
+                        <p id="lighter">Imports grant American businesses access to raw materials and intermediate goods, 
+                            supporting domestic production and driving economic growth.</p>
+                    </li>
+
+                    <li><img src="images/image25.jpg" alt="News 3">
+                        <p id="bold">The Clean Industrial Deal could enhance competitiveness and resilience</p>
+                        <p id="lighter">Delivering on common interoperable data spaces (energy, buildings, industry, mobility)
+                             should also become a priority.</p>
+                    </li>
                 </ul>
             </div>
         </div>
