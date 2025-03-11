@@ -84,13 +84,15 @@ $result = $conn->query("SELECT * FROM users"); // Assume 'users' is your table n
             <tr> 
                 <th>ID</th> 
                 <th>Username</th> 
-                <th>Email</th><!-- Assuming you have an email field --> 
+                <th>Email</th>
+                <th>PASSWORD_BCRYPT</th>
             </tr> 
             <?php while($row = $result->fetch_assoc()): ?> 
             <tr> 
                 <td><?php echo $row['id']; ?></td> 
                 <td><?php echo $row['username']; ?></td> 
-                <td><?php echo $row['email']; ?></td> 
+                <td><?php echo $row['email']; ?></td>
+                <td><?php echo $row['password']; ?></td> 
             </tr> 
             <?php endwhile; ?> 
         </table> 

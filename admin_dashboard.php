@@ -16,7 +16,7 @@ if (!isset($_SESSION['username'])) {
         body {
             display: flex;
             background-color: #f4f4f4;
-            background-image: url("images/wallpaper5.jpg"); /* Set the background image */
+            background-image: url("images/wallpaper6.jpg"); /* Set the background image */
             font-family: Arial, sans-serif;
         }
         .sidebar {
