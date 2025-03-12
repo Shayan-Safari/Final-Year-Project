@@ -3,23 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Weather</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer> </script>
+
     <style>
         body{
+            min-width: 100%;
             max-width: 100%;
+            background-image: url("images/wallpaper8.jpg"); /* Set the background image */
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            background-attachment: fixed; /* Make the background image fixed */
+        }
+        .footer, 
+        .header {
+            min-width: 100%;
         }
     </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.css"> <!-- Flexslider stylesheet -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
+    <script src="weather.js" defer> </script>
 </head>
 
+
 <body>
-    <header id="main-header">
-        <h1>User Login</h1>
-
-
+    <header>
+        <h1>Weather Forecast</h1>
         <nav>
-            <a id="left" href="http://localhost/final-year-project/adminpage.html">Admin</a> <!-- Link to admin page -->
+            <a id="left" href="adminpage.html">Admin</a> <!-- Link to admin page -->
             <a href="homepage.html">Home</a>
             <a href="page2.html">News</a>
             <a href="weather.html">Weather</a>
@@ -27,6 +43,14 @@
             <a id="right" href="userlogin.html">User Login</a> <!-- Link to user login page -->
             <button id="accessibility-button">Accessibility</button> <!-- Accessibility button -->
         </nav>
+
+        <div class="news-ticker">
+            <p>Breaking News: </p>
+
+            <a href="https://www.euronews.com/2025/03/11/ukraine-agrees-to-us-proposed-30-days-ceasefire-in-war-with-russia"> 
+                <p> Ukraine agrees to US-proposed immediate one-month ceasefire following Saudi Arabia talks</p>
+            </a>
+        </div>
     </header>
 
     <div class="news-nav-wrapper">
@@ -143,33 +167,23 @@
         </nav>
     </div>
 
-    <div id="user-form">
-        <div class="container">
-            <form action="user_action.php" method="POST">
-                <h2 id="form-title">Login</h2>
-                <input type="hidden" id="form-type" name="form_type" value="login">
-                <label for="username">Username:</label>
-
-                <input type="text" id="username" name="username" required>
-                <label for="password">Password:</label>
-
-                <input type="password" id="password" name="password" required>
-
-                <div id="register-fields" class="hidden">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
-                    <label for="confirm-password">Confirm Password:</label>
-                    <input type="password" id="confirm-password" name="confirm_password">
-                </div>
-
-                <button type="submit">Submit</button>
-
-                <div class="toggle-link" id="toggle-link">Don't have an account? Register here</div>
-            </form>
+    <div class="weather-slider">
+        <div class="flexslider" id="weather-slides" > 
+            <ul class="slides">
+                <li><img src="images/image30.jpg" alt="News 1"><p>Macron suggests Ukraine truce could be weeks away</p></li>
+                <li><img src="images/image3.jpg" alt="News 3"><p>UK-US trade deal could mean tariffs 'not necessary', says Trump</p></li>
+                <li><img src="images/image33.jpg" alt="News 5"><p>Deregulation row could overshadow EU’s flagship clean tech plan</p></li>
+                <li><img src="images/image35.jpg" alt="News 1"><p>Countries agree $200bn deal to protect nature at UN biodiversity talks in Rome</p></li> 
+                <li><img src="images/image34.jpg" alt="News 1"><p>How the UK drives, eats, and heats its homes need to change, government told</p></li>  
+                <li><img src="images/image2.jpg" alt="News 2"><p>Kyiv has reiterated that it is ready to take such a step only if Russia adheres to the ceasefire terms in the same way.</p></li>  
+                <li><img src="images/image6.jpg" alt="News 4"><p>Gaza ceasefire once again in doubt as first phase nears end</p></li> 
+            </ul> 
         </div>
-    </div>
-    
+    </div> 
 
+    <main>
+        <div id="map"></div>
+    </main>
 
     <footer>
 
@@ -247,7 +261,5 @@
         </div>
 
     </footer>
-
-    
 </body>
 </html>

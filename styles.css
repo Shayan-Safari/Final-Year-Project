@@ -1,6 +1,7 @@
 /******************************************************************* STYLE Of BODY */
 body{
     width: 100%;
+    overflow-x: hidden;
     max-width: fit-content;
     background-color: #e1b382; /* Light grey background */
     color: #03191e; /* Dark grey text */
@@ -16,6 +17,27 @@ body{
     flex-direction: column;
     opacity: 0.9;
     animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    #map {
+    height: 600px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    margin: 8%;
+    margin-top: 1%;
+    border-radius: 5%;
+    border: 5px solid #03191e;
+    }
+
+    .city-label {
+    font-size: 10px;
+    font-weight: bold;
+    background: rgb(0, 0, 0);
+    border: 1px solid #ccc;
+    padding: 1px;
+    border-radius: 3px;
     }
     
     
@@ -393,6 +415,7 @@ body{
     width: 30%;
     height: 100%; 
     border-radius: 5%;
+    margin-left: 8%;
     align-items: stretch;
     justify-content: center; 
     text-align: center; 
@@ -453,6 +476,31 @@ body{
     font-weight: bold;
     text-align: center;
     padding: 1%;
+    }
+
+    /********************************************************** STYLE Of WEATHER PAGE SLIDER */
+    .weather-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 1%;      
+    padding: 1%;
+    height: 10%;
+    min-width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    }
+
+    #weather-slides {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    border-radius: 1%;
+    margin: 1%;
+    margin-right: 5%;
+    width: 90%;
+    height: 300px;
     }
     
     

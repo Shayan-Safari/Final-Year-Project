@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'London': 'london',
         'Berlin': 'berlin',
         'Paris': 'paris',
-        'Canberra': 'canberra'
+        'Canberra': 'canberra',
     };
 
     const weatherBackgrounds = {
