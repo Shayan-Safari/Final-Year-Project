@@ -555,6 +555,10 @@ body{
     border-radius: 5%;
     border: 1px solid #2d545e;
     }
+
+    .weather-heading h2 {
+    color: #fffffffd;
+    }
     
     
     /************************************************************** STYLE Of Containers & NEWS BLOCKS */
