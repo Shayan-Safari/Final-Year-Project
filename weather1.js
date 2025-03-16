@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
             controlNav: true,
             directionNav: true,
             slideshow: true,
-            slideshowSpeed: 5000,
-            animationSpeed: 2000,
+            slideshowSpeed: 8500,
+            animationSpeed: 3000,
         });
 
         // Existing scroll animation code
