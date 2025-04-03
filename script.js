@@ -1,6 +1,6 @@
 // filepath: /C:/Users/shaya/OneDrive - University of Hertfordshire/Documents/University-of-Hertfordshire/8-Project-(11-April)/Project/Final-Year-Project/script.js
 document.addEventListener('DOMContentLoaded', function() {
-    const apiKey = '4cdcf8f3198d8b89b574be6e6a2eec79'; // Replace with your actual API key
+    const apiKey = '4cdcf8f3198d8b89b574be6e6a2eec79'; 
     const cities = ['London', 'Berlin', 'Paris', 'Canberra'];
     const cityIds = {
         'London': 'london',
